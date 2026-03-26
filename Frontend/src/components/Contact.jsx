@@ -18,10 +18,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    
+
     try {
       // Send data to the local backend server
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://hariii-1st.onrender.com/api/contact', formData);
       setStatus('success');
       setFormData({ name: '', age: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 5000); // Reset after 5s
@@ -52,9 +52,9 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-300 ml-1">Your Name</label>
-                <input 
-                  type="text" 
-                  name="name" 
+                <input
+                  type="text"
+                  name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -64,9 +64,9 @@ const Contact = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-slate-300 ml-1">Your Age</label>
-                <input 
-                  type="number" 
-                  name="age" 
+                <input
+                  type="number"
+                  name="age"
                   value={formData.age}
                   onChange={handleChange}
                   required
@@ -80,9 +80,9 @@ const Contact = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-slate-300 ml-1">Email Address</label>
-              <input 
-                type="email" 
-                name="email" 
+              <input
+                type="email"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -93,8 +93,8 @@ const Contact = () => {
 
             <div className="space-y-2">
               <label className="text-sm font-medium text-slate-300 ml-1">Message</label>
-              <textarea 
-                name="message" 
+              <textarea
+                name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -104,8 +104,8 @@ const Contact = () => {
               />
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={status === 'loading'}
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-6 rounded-xl shadow-lg shadow-blue-900/50 transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
             >

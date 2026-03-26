@@ -19,7 +19,7 @@ const AwardsSports = () => {
       title: "Science Fair 1st Prize",
       category: "Academics",
       icon: <Trophy className="w-8 h-8 text-blue-500" />,
-      desc: "Awarded first prize for the most emerging player in the interstae cricket tournament"
+      desc: "Awarded first prize for the most emerging player in the interstae cricket tournament."
     },
     {
       title: "Basketball Team Captain",
